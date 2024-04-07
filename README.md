@@ -2,13 +2,14 @@
 This project introduces CropGuard, a system that employs a flashlight and a range scanner to deter birds and animals from agricultural fields, thereby eliminating the need for specialized equipment and/or personel for the farmer. The system works on both static and moving animals.
 
 ## How it works:
-1. Connect Cropguard to your personal computer and set the wanted parameters for a given circular area, choosing parameters such as: Maximal distance, minimal distance, maximal scan angle, minimum scan angle, and area scan speed.
-2. Leave the device at the agriculural field, leveled even and towards the guarded area, at the height of 30 cm above ground. (For smaller birds and animals, consider lowering the height)
-3. The farmer 'Start Scan' button on his PC which is connected by a USB cable to Cropgurad.
-4. The system scans the area and stores a digital copy of distances from the device to the nearest point.
-5. The system scans each sweep and detects two points that were different from the scanned background.
-6. The system calculates the probable location of the animal in 1 second, turns the device towards it and flashes a directed beam of light at the animal.
-7. Goes back to 4.
+1. Connect Cropguard to your personal computer, and set the correct COM port (>> Control Panel >> Device Manager >> Ports) COM.py.
+2. Open GUI.py file, set the wanted parameters for a given circular area, choosing parameters such as: Maximal distance, minimal distance, maximal scan angle, minimum scan angle, and area scan speed.
+3. Leave the device at the agriculural field, leveled even and towards the guarded area, at the height of 30 cm above ground. (For smaller birds and animals, consider lowering the height)
+4. The farmer 'Start Scan' button on his PC which is connected by a USB cable to Cropgurad.
+5. The system scans the area and stores a digital copy of distances from the device to the nearest point.
+6. The system scans each sweep and detects two points that were different from the scanned background.
+7. The system calculates the probable location of the animal in 1 second, turns the device towards it and flashes a directed beam of light at the animal.
+8. Goes back to 4.
 
 ## Folder description:
 ESP32: source code for the esp side (firmware).
@@ -17,6 +18,13 @@ Documentation: wiring diagram + basic operating instructions
 Unit Tests: tests for individual hardware components.
 Parameters: contains description of configurable parameters
 Assets: Cropguard logo.
+
+## Hardware used:
+- ESP32 Doit
+- TFMini-S LiDAR range sensor
+- M995 Servo motor
+- 2 breadboard and dozen of wires
+- 1 LED.
 
 ## ESP libraries:
 - ESP32Servo by Kevin Herrington, John K. Bennet- version 1.1.2
